@@ -44,12 +44,11 @@ public class Post {
             return false;
         }
         Post post = (Post) o;
-        return id == post.id && Objects.equals(text, post.text)
-                && Objects.equals(comments, post.comments);
+        return id == post.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, text, comments);
+        return Objects.hash(id);
     }
 }
